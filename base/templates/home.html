@@ -1,1 +1,9 @@
-<h1>HOme</h1>
+{% extends "base.html" %}
+{% block content %}
+HomePage
+<br/>
+<form method="POST" action="{% url 'logout' %}" >
+    {% csrf_token %}
+    <button type="Submit">Logout</button>
+</form>
+{% endblock content %}
